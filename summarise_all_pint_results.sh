@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+# best results:
+./summarise_pint_results.R --results-file="pint-all_gwas.h5-depth-2-max_nz-10000-use_hier-true-geno-true-pheno-true-logurate-false.rds" --dataset="all_gwas.h5" | tee "pint-all_gwas.h5-depth-2-max_nz-10000-use_hier-true-geno-true-pheno-true-logurate-false.rds.summary_log"
+
+# # the rest
+# all old runs
+# ./summarise_pint_results.R --results-file="pint-all_gwas.h5-depth-2-max_nz-10000-use_hier-true-geno-true-pheno-false.rds"                 --dataset="all_gwas.h5"             | tee   pint-all_gwas.h5-depth-2-max_nz-10000-use_hier-true-geno-true-pheno-false.log
+# # ./summarise_pint_results.R --results-file="pint-all_gwas.h5-depth-2-max_nz-10000-use_hier-true.rds"                                       --dataset="all_gwas.h5"             | tee   pint-all_gwas.h5-depth-2-max_nz-10000-use_hier-true.log
+# # ./summarise_pint_results.R --results-file="pint-all_gwas.h5-depth-2-max_nz-500-use_hier-false.rds"                                        --dataset="all_gwas.h5"             | tee   pint-all_gwas.h5-depth-2-max_nz-500-use_hier-false.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-false-pheno-true.rds"         --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-false-pheno-true.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-agebmi_only.rds"   --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-agebmi_onlog
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-age_only.rds"      --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-age_only.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-agesex_only.rds"   --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-agesex_onlog
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-bmi_only.rds"      --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-bmi_only.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-bmisex_only.rds"   --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-false-geno-true-pheno-bmisex_onlog
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-true-geno-true-pheno-false.rds"          --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-true-geno-true-pheno-false.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-true.rds"                                --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-1000-use_hier-true.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-100-use_hier-true-geno-true-pheno-true.rds"            --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-100-use_hier-true-geno-true-pheno-true.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-100-use_hier-true.rds"                                 --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-100-use_hier-true.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-100-use_hier-true.rds_summary.rds"                     --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-100-use_hier-true.rds_summary.log
+# ./summarise_pint_results.R --results-file="pint-gwas_ldprune_320.h5-depth-2-max_nz-500-use_hier-false.rds"                                --dataset="gwas_ldprune_320.h5"     | tee   pint-gwas_ldprune_320.h5-depth-2-max_nz-500-use_hier-false.log
+# ./summarise_pint_results.R --results-file="pint-ld_full_r00001.h5-depth-2-max_nz-10000-use_hier-true-geno-true-pheno-false.rds"           --dataset="ld_full_r00001.h5"       | tee   pint-ld_full_r00001.h5-depth-2-max_nz-10000-use_hier-true-geno-true-pheno-false.log
+# ./summarise_pint_results.R --results-file="pint-ld_full_r00001.h5-depth-2-max_nz-10000-use_hier-true.rds"                                 --dataset="ld_full_r00001.h5"       | tee   pint-ld_full_r00001.h5-depth-2-max_nz-10000-use_hier-true.log
+# ./summarise_pint_results.R --results-file="pint-ld_full_r00001.h5-depth-2-max_nz-500-use_hier-false.rds"                                  --dataset="ld_full_r00001.h5"       | tee   pint-ld_full_r00001.h5-depth-2-max_nz-500-use_hier-false.log

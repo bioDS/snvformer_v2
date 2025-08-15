@@ -1,0 +1,44 @@
+#!/usr/bin/bash
+torchrun \
+  --master_addr="localhost" \
+  --master_port="12629" \
+   --nnodes=1 \
+   --nproc_per_node=1 \
+train_classifier.py \
+    --encoder-type="linformer" \
+    --total-epochs=12 \
+    --num-layers=3 \
+    --batch-size=4 \
+    --embed-dim=56 \
+    --num-heads=4 \
+    --seq-len=65803  \
+    --linformer-k=32 \
+    --h5-file="/data/ukbb/net_input/all_gwas.h5" \
+    --test-frac=0.3 \
+    --devices=0 \
+    --encoder-snapshot="none.pt" \
+    --no-load-encoder \
+    --snapshot-path=/data/ukbb/v2_snapshots/snvformer_hosearch_nopt_all_gwas.pt \
+    --warmup-batches=500 \
+    --warmup-min-lr=6.0514340987984604e-05 \
+    --warmup-max-lr=6.0514340987984604e-05 \
+    --main-scheduler-step-size=1000 \
+    --main-scheduler-gamma=1.00 \
+    --report-on-batch=1000 \
+    --position-encoding="embedding" \
+    --snv-encoding="embedding" \
+    --pos-combine="add" \
+    --torch-sdp \
+    --ffn-scale=2 \
+    --dropout=0.1284368165277642 \
+    --snv-embed-size=16 \
+    --pos-embed-size=56 \
+    --chrom-embed-size=32 \
+    --gene-embed-size=8 \
+    --gene-embed-graph \
+    --ignore-class \
+    --model-type="single-output" \
+    --target="gout" \
+    --save-every=100 \
+    --augment-frac=0.15 \
+    --augment-mult=1.0 \

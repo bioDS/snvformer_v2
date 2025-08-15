@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+torchrun \
+  --master_addr="localhost" \
+  --master_port="12423" \
+   --nnodes=1 \
+   --nproc_per_node=3 \
+train_encoder.py \
+    --encoder-type="linformer" \
+	--total-epochs=1 \
+	--num-layers=4 \
+	--batch-size=6 \
+	--embed-dim=64 \
+	--num-heads=4 \
+    --seq-len=65803  \
+    --linformer-k=64 \
+    --h5-file="/data/ukbb/net_input/genotyped_p1e-1.h5" \
+    --test-frac=0.3 \
+	--devices=0,1,2 \
+    --snapshot-path=/data/ukbb/v2_snapshots/snvformer_chrom_encoder.pt \
+    --warmup-batches=500 \
+    --warmup-min-lr=1e-7 \
+    --warmup-max-lr=1e-7 \
+    --main-scheduler-step-size=1000 \
+    --main-scheduler-gamma=1.00 \
+    --report-on-batch=1000 \
+    --no-gradscaler \
+    --position-encoding="fixed" \
+    --snv-encoding="embedding" \
+    --pos-combine="cat" \
+    --no-torch-sdp \
+    --ffn-scale=1 \
+    --dropout=0.05 \
+    --snv-embed-size=4 \
+    --pos-embed-size=56 \
+    --chrom-embed-size=4 \
+    --ignore-class \
+    --no-tf-init \
+    --no-augment-data \

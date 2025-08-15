@@ -1,0 +1,15 @@
+process_snv_mat.c
+process_snv_mat.cpython-310-x86_64-linux-gnu.so
+process_snv_mat.html
+*.pyc
+*.o
+figures/*
+*.svg
+*.pdf
+*.png
+*.jlso
+*.jld2
+*.txt
+*.rds
+*.log
+ray_results/*

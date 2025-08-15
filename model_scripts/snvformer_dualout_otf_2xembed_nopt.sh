@@ -1,0 +1,41 @@
+#!/usr/bin/bash
+torchrun \
+  --master_addr="localhost" \
+  --master_port="12424" \
+   --nnodes=1 \
+   --nproc_per_node=3 \
+train_classifier.py \
+    --encoder-type="linformer" \
+	--total-epochs=50 \
+	--num-layers=4 \
+	--batch-size=6 \
+	--embed-dim=128 \
+	--num-heads=4 \
+    --seq-len=65803  \
+    --linformer-k=64 \
+    --h5-file="/data/ukbb/net_input/genotyped_p1e-1.h5" \
+    --test-frac=0.3 \
+	--devices=0,1,2 \
+    --encoder-snapshot="none.pt" \
+    --no-load-encoder \
+    --snapshot-path=/data/ukbb/v2_snapshots/snvformer_dualout_otf_2xembed_nopt.pt \
+    --warmup-batches=500 \
+    --warmup-min-lr=1e-7 \
+    --warmup-max-lr=1e-7 \
+    --main-scheduler-step-size=1000 \
+    --main-scheduler-gamma=1.00 \
+    --report-on-batch=1000 \
+    --no-gradscaler \
+    --position-encoding="otf" \
+    --snv-encoding="embedding" \
+    --ignore-chrom \
+    --pos-combine="cat" \
+    --torch-sdp \
+    --ffn-scale=1 \
+    --dropout=0.05 \
+    --snv-embed-size=16 \
+    --pos-embed-size=112 \
+    --ignore-class \
+    --model-type="dual_output" \
+    --target="gout" \
+    --no-tf-init \

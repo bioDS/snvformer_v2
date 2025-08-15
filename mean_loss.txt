@@ -1,0 +1,40 @@
+Full losses
+mean urate loss: 4.711053945102458
+mean height loss: 129.0186261333191
+mean gout loss: 0.805711450163443
+full male losses
+mean urate loss: 4.530707818560875
+mean height loss: 109.5923773011688
+mean gout loss: 0.9540300131121446
+full female losses
+mean urate loss: 2.7303248298739557
+mean height loss: 53.112819160978155
+mean gout loss: 0.4721471075749541
+full gout losses
+mean urate loss: 5.04493706478076
+mean height loss: 136.12520707261723
+mean gout loss: 0.3132616875182229
+full non-gout losses
+mean urate loss: 3.018426379955434
+mean height loss: 103.11154885098031
+mean gout loss: 0.3132616875182229
+Balanced losses
+mean urate loss: 4.571883990520563
+mean height loss: 125.02604008729196
+mean gout loss: 0.6931471805599453
+balanced male losses
+mean urate loss: 4.5361683866186295
+mean height loss: 108.75755846534766
+mean gout loss: 0.6517435284867117
+balanced female losses
+mean urate loss: 2.8091956006018592
+mean height loss: 53.007767535090885
+mean gout loss: 0.5182405436423061
+Balanced gout losses
+mean urate loss: 5.04493706478076
+mean height loss: 136.12520707261723
+mean gout loss: 0.3132616875182229
+Balanced non-gout losses
+mean urate loss: 3.0200259489654324
+mean height loss: 103.08536648672163
+mean gout loss: 0.3132616875182229
